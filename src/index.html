@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AngularFcmDemo</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="manifest" href="./manifest.json">
+  
+</head>
+<body>
+  
+  <!-- <script src="./firebase-messaging-sw.js"></script> -->
+  <script>
+    /*if ('serviceWorker' in navigator) {
+      window.addEventListener('load', 
+          () => {
+            try{
+                navigator.serviceWorker.register('./firebase-messaging-sw.js');
+            } catch(error){
+                console.log(error);
+            }
+          });
+    }*/
+    // if('serviceWorker' in navigator) { 
+    //     navigator.serviceWorker.register('./firebase-messaging-sw.js').then(
+    //         function(registration) {
+    //             messaging.useServiceWorker(registration);  
+    //             console.log("Service Worker Registered");
+    //         }
+    //     ).catch(function (err){
+    //         console.log("Service Worker Registration FAILED");
+    //         console.log(err);
+    //     }); 
+    // }
+  </script>
+
+  <app-root></app-root>
+
+</body>
+</html>

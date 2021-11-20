@@ -1,0 +1,40 @@
+<header>
+    <button [hidden]='token' (click)="login()">Login</button>
+    <button [hidden]='!token' (click)="logout()">Logout</button>
+</header>
+
+<p>Firebase Registration Token:</p>
+<p> {{ token ? token : '-' }} </p>
+
+<hr>
+<strong> Ultima Notifica</strong>
+<p>
+    {{ lastNotifica ? lastNotifica.data : '-' }}
+    || 
+    {{ lastNotifica ?lastNotifica.info : '-'}}</p>
+<hr>
+<table>
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th> || </th>
+            <th>Notifica</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let notifica of notifiche">
+           <td>{{ notifica.data }}</td> 
+           <td> || </td> 
+           <td>{{ notifica.info }}</td>
+            
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+
+<button (click)="listenMessages()">
+    Get notified!
+</button>
+
